@@ -1,0 +1,108 @@
+/* Light/Dark Theme */
+
+.light-dark-mode {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-dark-mode .container {
+  width: 100%;
+  max-width: 500px;
+  padding: 48px 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-dark-mode .container p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 28px;
+}
+
+.light-dark-mode button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.light-dark-mode button:hover {
+  transform: translateY(-2px);
+}
+
+.light-dark-mode button:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 4px;
+}
+
+/* Dark theme */
+.light-dark-mode#dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.light-dark-mode#dark .container {
+  background-color: #1f2937;
+}
+
+.light-dark-mode#dark button {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.light-dark-mode#dark button:hover {
+  background-color: #d1d5db;
+}
+
+/* Light theme */
+.light-dark-mode#light {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.light-dark-mode#light .container {
+  background-color: #ffffff;
+}
+
+.light-dark-mode#light button {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.light-dark-mode#light button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .light-dark-mode .container {
+    padding: 36px 20px;
+  }
+
+  .light-dark-mode .container p {
+    font-size: 1.6rem;
+  }
+
+  .light-dark-mode button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .light-dark-mode,
+  .light-dark-mode .container,
+  .light-dark-mode button {
+    transition: none;
+  }
+}
